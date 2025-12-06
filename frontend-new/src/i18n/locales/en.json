@@ -1,0 +1,332 @@
+{
+  "common": {
+    "appName": "Daqeeq",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية",
+    "logout": "Logout",
+    "login": "Login",
+    "signup": "Sign Up",
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "warning": "Warning",
+    "info": "Information",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "settings": "Settings",
+    "profile": "Profile",
+    "dashboard": "Dashboard",
+    "home": "Home",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "export": "Export",
+    "import": "Import"
+  },
+  "navigation": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "services": "Services",
+    "orders": "Orders",
+    "inventory": "Inventory",
+    "predictions": "Predictions",
+    "feedback": "Feedback",
+    "reports": "Reports",
+    "settings": "Settings",
+    "help": "Help",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "admin": "Admin Panel"
+  },
+  "landing": {
+    "hero": {
+      "title": "AI-Powered Cleaning Supply Forecasting",
+      "subtitle": "Optimize your cleaning supply management with intelligent predictions",
+      "cta": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Our Features",
+      "feature1": {
+        "title": "Smart Predictions",
+        "description": "AI-powered forecasting for accurate supply demand predictions"
+      },
+      "feature2": {
+        "title": "Real-time Analytics",
+        "description": "Monitor your usage patterns and get actionable insights"
+      },
+      "feature3": {
+        "title": "Seamless Integration",
+        "description": "Easy integration with your existing systems"
+      },
+      "feature4": {
+        "title": "Cost Optimization",
+        "description": "Reduce waste and optimize your spending"
+      }
+    },
+    "pricing": {
+      "title": "Simple & Transparent Pricing",
+      "basic": "Basic",
+      "professional": "Professional",
+      "enterprise": "Enterprise"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": "How does the AI prediction work?",
+      "answer1": "Our AI analyzes your historical usage patterns and facility characteristics to provide accurate predictions.",
+      "question2": "What integrations are supported?",
+      "answer2": "We support integration with most major supply management systems."
+    },
+    "cta": {
+      "title": "Ready to optimize your supply chain?",
+      "description": "Start with a free trial today and see the difference.",
+      "button": "Start Free Trial"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In",
+      "email": "Email Address",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "signInButton": "Sign In",
+      "noAccount": "Don't have an account?",
+      "signUpLink": "Sign up",
+      "invalidCredentials": "Invalid email or password",
+      "welcomeBack": "Welcome back!"
+    },
+    "signUp": {
+      "title": "Create Account",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email Address",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "companyName": "Company Name",
+      "organizationType": "Organization Type",
+      "country": "Country",
+      "phoneNumber": "Phone Number",
+      "termsAgreement": "I agree to the Terms and Conditions",
+      "signUpButton": "Create Account",
+      "alreadyHaveAccount": "Already have an account?",
+      "signInLink": "Sign in",
+      "passwordMismatch": "Passwords do not match",
+      "accountCreated": "Account created successfully!"
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "enterEmail": "Enter your email address",
+      "resetButton": "Send Reset Link",
+      "checkEmail": "Check your email for reset instructions"
+    }
+  },
+  "dashboard": {
+    "user": {
+      "title": "User Dashboard",
+      "welcome": "Welcome, {{name}}!",
+      "overview": "Overview",
+      "statistics": "Statistics",
+      "recentOrders": "Recent Orders",
+      "upcomingShipments": "Upcoming Shipments",
+      "inventoryStatus": "Inventory Status",
+      "predictions": "Supply Predictions",
+      "orders": {
+        "title": "Orders",
+        "newOrder": "New Order",
+        "allOrders": "All Orders",
+        "pending": "Pending",
+        "completed": "Completed",
+        "cancelled": "Cancelled",
+        "orderDate": "Order Date",
+        "status": "Status",
+        "total": "Total"
+      },
+      "inventory": {
+        "title": "Inventory",
+        "addItem": "Add Item",
+        "currentStock": "Current Stock",
+        "reorderLevel": "Reorder Level",
+        "lastUpdated": "Last Updated"
+      }
+    },
+    "provider": {
+      "title": "Provider Dashboard",
+      "welcome": "Welcome, {{companyName}}!",
+      "activeContracts": "Active Contracts",
+      "revenue": "Revenue",
+      "clientsServed": "Clients Served",
+      "performance": "Performance",
+      "orders": {
+        "title": "Orders",
+        "incoming": "Incoming Orders",
+        "inProgress": "In Progress",
+        "delivered": "Delivered",
+        "rate": "Rating"
+      },
+      "serviceSchedule": "Service Schedule",
+      "clientManagement": "Client Management",
+      "invoicing": "Invoicing"
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "welcome": "Admin Panel",
+      "systemOverview": "System Overview",
+      "userManagement": "User Management",
+      "providerManagement": "Provider Management",
+      "reports": "Reports",
+      "systemHealth": "System Health",
+      "activeUsers": "Active Users",
+      "totalRevenue": "Total Revenue",
+      "platformStats": "Platform Statistics",
+      "recentActivity": "Recent Activity",
+      "feedback": {
+        "title": "Feedback Review",
+        "summary": "Summary",
+        "details": "Details",
+        "accuracy": "Model Accuracy",
+        "underestimated": "Underestimated",
+        "overestimated": "Overestimated"
+      }
+    }
+  },
+  "predictions": {
+    "title": "Supply Predictions",
+    "newPrediction": "Get Prediction",
+    "facilityInfo": "Facility Information",
+    "facilitySize": "Facility Size (sqm)",
+    "numberOfPeople": "Number of People",
+    "numberOfBathrooms": "Number of Bathrooms",
+    "organizationType": "Organization Type",
+    "cleaningFrequency": "Cleaning Frequency",
+    "daysCount": "Number of Days",
+    "frequency": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "daily": "Daily"
+    },
+    "results": "Prediction Results",
+    "toiletPaper": "Toilet Paper",
+    "handSoap": "Hand Soap",
+    "disinfectant": "Disinfectant",
+    "airFreshener": "Air Freshener",
+    "glassCleaner": "Glass Cleaner",
+    "trashBags": "Trash Bags",
+    "tissues": "Tissues",
+    "workers": "Workers Needed",
+    "units": {
+      "rolls": "rolls",
+      "packs": "packs",
+      "gallons": "gallons",
+      "mL": "mL",
+      "L": "L",
+      "workers": "workers"
+    },
+    "createOrder": "Create Order",
+    "addToCart": "Add to Cart",
+    "accuracy": "Accuracy"
+  },
+  "feedback": {
+    "title": "Supply Feedback",
+    "submitFeedback": "Submit Feedback",
+    "feedbackType": "Feedback Type",
+    "accurate": "Accurate",
+    "underestimated": "Underestimated",
+    "overestimated": "Overestimated",
+    "predictedQuantity": "Predicted Quantity",
+    "actualQuantity": "Actual Quantity",
+    "notes": "Notes",
+    "daysUntilReorder": "Days Until Reorder",
+    "submit": "Submit Feedback",
+    "successMessage": "Feedback submitted successfully!",
+    "viewHistory": "View History",
+    "variance": "Variance"
+  },
+  "orders": {
+    "title": "Orders",
+    "newOrder": "New Order",
+    "allOrders": "All Orders",
+    "orderID": "Order ID",
+    "date": "Date",
+    "status": "Status",
+    "total": "Total",
+    "items": "Items",
+    "supplier": "Supplier",
+    "deliveryDate": "Delivery Date",
+    "notes": "Notes",
+    "statuses": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "details": "Order Details",
+    "confirmation": "Confirm Order",
+    "tracking": "Track Order"
+  },
+  "partnerRequest": {
+    "title": "Become a Partner",
+    "subtitle": "Join our network of cleaning service providers",
+    "companyName": "Company Name",
+    "contactPerson": "Contact Person",
+    "email": "Email Address",
+    "phoneNumber": "Phone Number",
+    "website": "Website (optional)",
+    "serviceTypes": "Service Types",
+    "yearsExperience": "Years of Experience",
+    "employeeCount": "Number of Employees",
+    "servicingArea": "Servicing Area",
+    "aboutCompany": "Tell us about your company",
+    "certifications": "Certifications",
+    "insuranceCoverage": "Insurance Coverage",
+    "documentUpload": "Upload Supporting Documents",
+    "termsAgreement": "I agree to the Partner Terms and Conditions",
+    "submitRequest": "Submit Request",
+    "successMessage": "Partner request submitted successfully!",
+    "reviewProcess": "Your request will be reviewed within 5 business days."
+  },
+  "errors": {
+    "pageNotFound": "Page Not Found",
+    "unauthorized": "Unauthorized Access",
+    "serverError": "Server Error",
+    "networkError": "Network Error",
+    "tryAgain": "Try Again",
+    "goHome": "Go Home"
+  },
+  "notifications": {
+    "orderConfirmed": "Order confirmed",
+    "orderShipped": "Order shipped",
+    "orderDelivered": "Order delivered",
+    "feedbackReceived": "Feedback received",
+    "predictionReady": "New prediction ready",
+    "newMessage": "New message received"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": {
+      "title": "Profile Settings",
+      "editProfile": "Edit Profile",
+      "changePassword": "Change Password",
+      "twoFactor": "Two-Factor Authentication"
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "emailNotifications": "Email Notifications",
+      "smsNotifications": "SMS Notifications",
+      "pushNotifications": "Push Notifications"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "dataPrivacy": "Data Privacy",
+      "activityLog": "Activity Log"
+    }
+  }
+}

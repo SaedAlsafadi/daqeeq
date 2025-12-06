@@ -1,0 +1,332 @@
+{
+  "common": {
+    "appName": "دقيق",
+    "language": "اللغة",
+    "english": "English",
+    "arabic": "العربية",
+    "logout": "تسجيل الخروج",
+    "login": "تسجيل الدخول",
+    "signup": "إنشاء حساب",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "submit": "إرسال",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "close": "إغلاق",
+    "back": "العودة",
+    "next": "التالي",
+    "previous": "السابق",
+    "settings": "الإعدادات",
+    "profile": "الملف الشخصي",
+    "dashboard": "لوحة التحكم",
+    "home": "الرئيسية",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "export": "تصدير",
+    "import": "استيراد"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "services": "الخدمات",
+    "orders": "الطلبات",
+    "inventory": "المخزون",
+    "predictions": "التنبؤات",
+    "feedback": "ملاحظات",
+    "reports": "التقارير",
+    "settings": "الإعدادات",
+    "help": "مساعدة",
+    "about": "عن الشركة",
+    "contact": "اتصل بنا",
+    "admin": "لوحة المسؤول"
+  },
+  "landing": {
+    "hero": {
+      "title": "التنبؤ الذكي بإمدادات التنظيف بتقنية الذكاء الاصطناعي",
+      "subtitle": "حسّن إدارة إمدادات التنظيف لديك باستخدام التنبؤات الذكية",
+      "cta": "ابدأ الآن",
+      "learnMore": "تعلم المزيد"
+    },
+    "features": {
+      "title": "ميزاتنا",
+      "feature1": {
+        "title": "تنبؤات ذكية",
+        "description": "تنبؤات مدعومة بالذكاء الاصطناعي للحصول على توقعات دقيقة للطلب على الإمدادات"
+      },
+      "feature2": {
+        "title": "تحليلات فورية",
+        "description": "راقب أنماط استخدامك واحصل على رؤى قابلة للتنفيذ"
+      },
+      "feature3": {
+        "title": "التكامل السلس",
+        "description": "تكامل سهل مع أنظمتك الحالية"
+      },
+      "feature4": {
+        "title": "تحسين التكاليف",
+        "description": "قلل الهدر وحسّن إنفاقك"
+      }
+    },
+    "pricing": {
+      "title": "تسعير بسيط وشفاف",
+      "basic": "أساسي",
+      "professional": "احترافي",
+      "enterprise": "مؤسسي"
+    },
+    "faq": {
+      "title": "الأسئلة الشائعة",
+      "question1": "كيف يعمل التنبؤ بالذكاء الاصطناعي؟",
+      "answer1": "يحلل ذكاؤنا الاصطناعي أنماط الاستخدام التاريخي وخصائص المنشأة لتقديم تنبؤات دقيقة.",
+      "question2": "ما هي عمليات التكامل المدعومة؟",
+      "answer2": "ندعم التكامل مع معظم أنظمة إدارة الإمدادات الرئيسية."
+    },
+    "cta": {
+      "title": "هل أنت مستعد لتحسين سلسلة التوريد لديك؟",
+      "description": "ابدأ بنسخة تجريبية مجانية اليوم وشاهد الفرق.",
+      "button": "ابدأ النسخة التجريبية المجانية"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "تسجيل الدخول",
+      "email": "عنوان البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "rememberMe": "تذكرني",
+      "forgotPassword": "هل نسيت كلمة المرور؟",
+      "signInButton": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "signUpLink": "إنشاء حساب",
+      "invalidCredentials": "بريد إلكتروني أو كلمة مرور غير صحيحة",
+      "welcomeBack": "أهلا بعودتك!"
+    },
+    "signUp": {
+      "title": "إنشاء حساب",
+      "firstName": "الاسم الأول",
+      "lastName": "الاسم الأخير",
+      "email": "عنوان البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "companyName": "اسم الشركة",
+      "organizationType": "نوع المنظمة",
+      "country": "الدولة",
+      "phoneNumber": "رقم الهاتف",
+      "termsAgreement": "أوافق على شروط الخدمة",
+      "signUpButton": "إنشاء حساب",
+      "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+      "signInLink": "تسجيل الدخول",
+      "passwordMismatch": "كلمات المرور غير متطابقة",
+      "accountCreated": "تم إنشاء الحساب بنجاح!"
+    },
+    "resetPassword": {
+      "title": "إعادة تعيين كلمة المرور",
+      "enterEmail": "أدخل عنوان بريدك الإلكتروني",
+      "resetButton": "إرسال رابط الإعادة",
+      "checkEmail": "تحقق من بريدك الإلكتروني للحصول على تعليمات الإعادة"
+    }
+  },
+  "dashboard": {
+    "user": {
+      "title": "لوحة تحكم المستخدم",
+      "welcome": "مرحبا، {{name}}!",
+      "overview": "نظرة عامة",
+      "statistics": "الإحصائيات",
+      "recentOrders": "الطلبات الأخيرة",
+      "upcomingShipments": "الشحنات القادمة",
+      "inventoryStatus": "حالة المخزون",
+      "predictions": "تنبؤات الإمدادات",
+      "orders": {
+        "title": "الطلبات",
+        "newOrder": "طلب جديد",
+        "allOrders": "جميع الطلبات",
+        "pending": "قيد الانتظار",
+        "completed": "مكتمل",
+        "cancelled": "ملغاة",
+        "orderDate": "تاريخ الطلب",
+        "status": "الحالة",
+        "total": "الإجمالي"
+      },
+      "inventory": {
+        "title": "المخزون",
+        "addItem": "إضافة عنصر",
+        "currentStock": "المخزون الحالي",
+        "reorderLevel": "مستوى إعادة الطلب",
+        "lastUpdated": "آخر تحديث"
+      }
+    },
+    "provider": {
+      "title": "لوحة تحكم مزود الخدمة",
+      "welcome": "مرحبا، {{companyName}}!",
+      "activeContracts": "العقود النشطة",
+      "revenue": "الإيرادات",
+      "clientsServed": "العملاء المخدومين",
+      "performance": "الأداء",
+      "orders": {
+        "title": "الطلبات",
+        "incoming": "الطلبات الواردة",
+        "inProgress": "قيد التنفيذ",
+        "delivered": "تم التسليم",
+        "rate": "التقييم"
+      },
+      "serviceSchedule": "جدول الخدمة",
+      "clientManagement": "إدارة العملاء",
+      "invoicing": "الفواتير"
+    },
+    "admin": {
+      "title": "لوحة تحكم المسؤول",
+      "welcome": "لوحة المسؤول",
+      "systemOverview": "نظرة عامة على النظام",
+      "userManagement": "إدارة المستخدمين",
+      "providerManagement": "إدارة مزودي الخدمات",
+      "reports": "التقارير",
+      "systemHealth": "صحة النظام",
+      "activeUsers": "المستخدمون النشطون",
+      "totalRevenue": "إجمالي الإيرادات",
+      "platformStats": "إحصائيات المنصة",
+      "recentActivity": "النشاط الأخير",
+      "feedback": {
+        "title": "مراجعة الملاحظات",
+        "summary": "الملخص",
+        "details": "التفاصيل",
+        "accuracy": "دقة النموذج",
+        "underestimated": "مقلل عن الحد",
+        "overestimated": "مبالغ فيه"
+      }
+    }
+  },
+  "predictions": {
+    "title": "تنبؤات الإمدادات",
+    "newPrediction": "الحصول على تنبؤ",
+    "facilityInfo": "معلومات المنشأة",
+    "facilitySize": "حجم المنشأة (متر مربع)",
+    "numberOfPeople": "عدد الأشخاص",
+    "numberOfBathrooms": "عدد المرافق الصحية",
+    "organizationType": "نوع المنظمة",
+    "cleaningFrequency": "تكرار التنظيف",
+    "daysCount": "عدد الأيام",
+    "frequency": {
+      "low": "منخفض",
+      "medium": "متوسط",
+      "high": "مرتفع",
+      "daily": "يومي"
+    },
+    "results": "نتائج التنبؤ",
+    "toiletPaper": "ورق التواليت",
+    "handSoap": "صابون اليدين",
+    "disinfectant": "مطهر",
+    "airFreshener": "منعش الهواء",
+    "glassCleaner": "منظف الزجاج",
+    "trashBags": "أكياس القمامة",
+    "tissues": "المناديل",
+    "workers": "عدد العاملين المطلوبين",
+    "units": {
+      "rolls": "لفة",
+      "packs": "عبوة",
+      "gallons": "جالون",
+      "mL": "ميليلتر",
+      "L": "لتر",
+      "workers": "عامل"
+    },
+    "createOrder": "إنشاء طلب",
+    "addToCart": "إضافة إلى السلة",
+    "accuracy": "الدقة"
+  },
+  "feedback": {
+    "title": "ملاحظات الإمدادات",
+    "submitFeedback": "إرسال ملاحظات",
+    "feedbackType": "نوع الملاحظات",
+    "accurate": "دقيقة",
+    "underestimated": "مقلل عن الحد",
+    "overestimated": "مبالغ فيه",
+    "predictedQuantity": "الكمية المتوقعة",
+    "actualQuantity": "الكمية الفعلية",
+    "notes": "ملاحظات",
+    "daysUntilReorder": "الأيام حتى إعادة الطلب",
+    "submit": "إرسال الملاحظات",
+    "successMessage": "تم إرسال الملاحظات بنجاح!",
+    "viewHistory": "عرض السجل",
+    "variance": "التباين"
+  },
+  "orders": {
+    "title": "الطلبات",
+    "newOrder": "طلب جديد",
+    "allOrders": "جميع الطلبات",
+    "orderID": "رقم الطلب",
+    "date": "التاريخ",
+    "status": "الحالة",
+    "total": "الإجمالي",
+    "items": "العناصر",
+    "supplier": "المورد",
+    "deliveryDate": "تاريخ التسليم",
+    "notes": "ملاحظات",
+    "statuses": {
+      "pending": "قيد الانتظار",
+      "confirmed": "مؤكد",
+      "shipped": "تم الشحن",
+      "delivered": "تم التسليم",
+      "cancelled": "ملغاة"
+    },
+    "details": "تفاصيل الطلب",
+    "confirmation": "تأكيد الطلب",
+    "tracking": "تتبع الطلب"
+  },
+  "partnerRequest": {
+    "title": "اصبح شريكنا",
+    "subtitle": "انضم إلى شبكتنا من مزودي خدمات التنظيف",
+    "companyName": "اسم الشركة",
+    "contactPerson": "شخص الاتصال",
+    "email": "عنوان البريد الإلكتروني",
+    "phoneNumber": "رقم الهاتف",
+    "website": "الموقع الإلكتروني (اختياري)",
+    "serviceTypes": "أنواع الخدمات",
+    "yearsExperience": "سنوات الخبرة",
+    "employeeCount": "عدد الموظفين",
+    "servicingArea": "منطقة الخدمة",
+    "aboutCompany": "أخبرنا عن شركتك",
+    "certifications": "الشهادات",
+    "insuranceCoverage": "تغطية التأمين",
+    "documentUpload": "تحميل المستندات الداعمة",
+    "termsAgreement": "أوافق على شروط الشراكة",
+    "submitRequest": "إرسال الطلب",
+    "successMessage": "تم إرسال طلب الشراكة بنجاح!",
+    "reviewProcess": "سيتم مراجعة طلبك خلال 5 أيام عمل."
+  },
+  "errors": {
+    "pageNotFound": "الصفحة غير موجودة",
+    "unauthorized": "وصول غير مصرح",
+    "serverError": "خطأ في الخادم",
+    "networkError": "خطأ في الشبكة",
+    "tryAgain": "حاول مرة أخرى",
+    "goHome": "العودة للرئيسية"
+  },
+  "notifications": {
+    "orderConfirmed": "تم تأكيد الطلب",
+    "orderShipped": "تم شحن الطلب",
+    "orderDelivered": "تم تسليم الطلب",
+    "feedbackReceived": "تم استقبال الملاحظات",
+    "predictionReady": "التنبؤ الجديد جاهز",
+    "newMessage": "رسالة جديدة مستلمة"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "profile": {
+      "title": "إعدادات الملف الشخصي",
+      "editProfile": "تعديل الملف الشخصي",
+      "changePassword": "تغيير كلمة المرور",
+      "twoFactor": "المصادقة الثنائية"
+    },
+    "notifications": {
+      "title": "إعدادات الإشعارات",
+      "emailNotifications": "إشعارات البريد الإلكتروني",
+      "smsNotifications": "إشعارات الرسائل النصية",
+      "pushNotifications": "إشعارات الدفع"
+    },
+    "privacy": {
+      "title": "الخصوصية والأمان",
+      "dataPrivacy": "خصوصية البيانات",
+      "activityLog": "سجل النشاط"
+    }
+  }
+}
