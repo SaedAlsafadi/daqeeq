@@ -1,7 +1,7 @@
 {
-  "name": "cleanity-backend",
+  "name": "daqeeq-backend",
   "version": "1.0.0",
-  "description": "Backend API for Cleanity - AI-Powered Cleaning Supply Forecasting Platform",
+  "description": "Backend API for Daqeeq - AI-Powered Cleaning Supply Forecasting Platform",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,14 +9,14 @@
     "test": "jest"
   },
   "keywords": [
-    "cleanity",
+    "daqeeq",
     "cleaning",
     "supply",
     "forecasting",
     "ai",
     "b2b"
   ],
-  "author": "Cleanity Team",
+  "author": "Daqeeq Team",
   "license": "MIT",
   "dependencies": {
     "@supabase/supabase-js": "^2.38.4",

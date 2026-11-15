@@ -1,355 +1,179 @@
-﻿# Cleanity - AI-Powered Cleaning Supply Forecasting Platform
+﻿<div align="center">
 
-<div align="center">
+# Daqeeq · دقيق
 
-![Cleanity Logo](https://img.shields.io/badge/Cleanity-AI%20Powered-blue?style=for-the-badge)
+**AI-powered cleaning-supply forecasting and procurement platform**
 
-**Smart Predictions • Cost Optimization • Real-Time Insights**
+Graduation project · B.Sc. Computer Science · Imam Mohammad Ibn Saud Islamic University (2026)
 
-[![React](https://img.shields.io/badge/React-18.2.0-blue)](https://reactjs.org/)
-[![Node.js](https://img.shields.io/badge/Node.js-18+-green)](https://nodejs.org/)
-[![Python](https://img.shields.io/badge/Python-3.8+-yellow)](https://python.org/)
-[![License](https://img.shields.io/badge/License-MIT-purple)](LICENSE)
+![React](https://img.shields.io/badge/React_18-20232A?style=flat&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase_(PostgreSQL)-3FCF8E?style=flat&logo=supabase&logoColor=white)
 
 </div>
 
 ---
 
-## 🚀 Overview
+## Overview
 
-Cleanity is a B2B SaaS platform that uses artificial intelligence to predict cleaning supply consumption for businesses. By analyzing facility specifications and historical usage patterns, Cleanity helps organizations:
+Daqeeq helps organizations such as hotels, hospitals, schools, offices and malls plan their cleaning-supply needs. They enter a facility profile, and Daqeeq predicts how much of each supply they will use over a chosen period. The platform then connects them with suppliers and service providers to request quotations and manage the procurement process.
 
-- **Reduce Costs** by preventing over-ordering and understocking
-- **Optimize Inventory** with accurate demand forecasting
-- **Save Time** with automated supply predictions
-- **Make Data-Driven Decisions** based on real usage patterns
+The system has three services:
 
-## ✨ Key Features
+- a **React + TypeScript** web app, bilingual in English and Arabic with full RTL support;
+- a **Node.js / Express** REST API;
+- a **Python / Flask** machine-learning service that serves the forecasting models.
 
-### 🤖 AI-Powered Predictions
-- Predict 8 different cleaning supply types
-- 99.7%+ accuracy using ExtraTreesRegressor models
-- Support for 14+ organization types
-- Customizable prediction periods
+## Features
 
-### 📊 Smart Dashboard
-- Real-time inventory monitoring
-- Low stock alerts
-- Order tracking
-- Usage analytics and trends
+**For client organizations**
+- **AI demand prediction.** Forecasts eight supply targets from facility size, number of people, number of bathrooms, organization type, cleaning frequency and period length.
+- **Dashboard and analytics.** Shows an overview of predictions, requests and usage.
+- **Quotation requests.** Send supply requests to suppliers and service providers, and track their status.
+- **Supplier management.** Lists and manages the suppliers an organization works with.
+- **Supply feedback.** Report actual consumption so it can be compared with the predictions.
+- **Notifications** and **profile/settings**.
 
-### 🔮 Supply Types Predicted
-1. Toilet Paper (sheets)
-2. Hand Soap (mL)
-3. Disinfectant (L)
-4. Air Freshener (mL)
-5. Glass Cleaner (mL)
-6. Trash Bags (8 gallon)
-7. Tissues (sheets)
-8. Number of Workers Needed
+**For service providers**
+- Onboarding and a provider profile
+- Incoming request management, analytics and communication with clients
 
-### 🏢 Supported Organization Types
-- Hotels & Hospitality
-- Hospitals & Healthcare
-- Schools & Universities
-- Restaurants & Food Service
-- Retail Stores
-- Offices & Companies
-- And 8+ more types
+**For administrators**
+- Reviewing the feedback submitted by clients
+- Admin communications
 
-## 🏗️ Architecture
+**Platform**
+- **Feedback-driven retraining.** Collected feedback can be exported in training format (`/api/model-training`). `ai-model/train_with_feedback.py` retrains the models on it.
+- **Bilingual UI.** English/Arabic through i18next, with RTL layout and light/dark themes.
+- **Role-based access.** Four roles: `client`, `supplier`, `service_provider` and `admin`. Authentication uses JWT, and passwords are hashed with bcrypt.
+- **API hardening.** Helmet, CORS, rate limiting and request validation.
+
+## Forecast targets
+
+| # | Target | Unit |
+|---|---|---|
+| 1 | Toilet paper | sheets |
+| 2 | Hand soap | mL |
+| 3 | Disinfectant | L |
+| 4 | Air freshener | mL |
+| 5 | Glass cleaner | mL |
+| 6 | Trash bags (8 gallon) | bags |
+| 7 | Tissues | sheets |
+| 8 | Cleaning workers needed | workers |
+
+Supported organization types: Airports, Banks, Colleges, Companies, Gyms, Hospitals, Hotels, Libraries, Restaurants, Retail Stores, Schools, Shopping Malls, Storage Facilities and Warehouses.
+
+### Model
+
+Each target has its own **ExtraTreesRegressor** model (scikit-learn), plus a shared preprocessor. Reported validation results:
+
+| Target | R² | MAE |
+|---|---|---|
+| Toilet paper | 0.9993 | 60,483 sheets |
+| Hand soap | 0.9994 | 8,416 mL |
+| Disinfectant | 0.9970 | 3,815 L |
+| Air freshener | 1.0000 | 607 mL |
+| Glass cleaner | 0.9989 | 5,226 mL |
+| Trash bags | 0.9978 | 1,293 bags |
+| Tissues | 0.9999 | 1,672 sheets |
+| Workers needed | 0.9998 | 0.33 workers |
+
+> The trained model files (`ai-model/models/*.joblib`) are excluded from version control by `.gitignore`. Place them in `ai-model/models/` before starting the ML service.
+
+## Architecture
 
 ```
-┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
-│                 │      │                 │      │                 │
-│    React UI     │─────▶│  Express API    │─────▶│   Flask ML      │
-│  (TypeScript)   │      │   (Node.js)     │      │   (Python)      │
-│                 │      │                 │      │                 │
-└─────────────────┘      └─────────────────┘      └─────────────────┘
-        │                        │
-        │                        │
-        ▼                        ▼
-┌─────────────────────────────────────────┐
-│                                         │
-│         Supabase (PostgreSQL)           │
-│     Authentication & Database           │
-│                                         │
-└─────────────────────────────────────────┘
+┌────────────────────┐   REST    ┌────────────────────┐   HTTP    ┌────────────────────┐
+│  React + TS (Vite) │ ────────▶ │   Express API      │ ────────▶ │  Flask ML service  │
+│  EN / AR · RTL     │           │   JWT · RBAC       │           │  ExtraTrees models │
+└────────────────────┘           └─────────┬──────────┘           └────────────────────┘
+                                           │
+                                           ▼
+                                 ┌────────────────────┐
+                                 │ Supabase / Postgres│
+                                 └────────────────────┘
 ```
 
-## 🛠️ Tech Stack
+## Tech stack
 
-### Frontend
-- **Framework**: React 18.2 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **State Management**: React Context API
-- **Routing**: React Router v6
-- **HTTP Client**: Axios
-- **UI Components**: Heroicons, React Toastify
+| Layer | Technologies |
+|---|---|
+| Frontend | React 18, TypeScript, Vite, Tailwind CSS, React Router, React Hook Form, i18next, ApexCharts, Framer Motion, Axios |
+| Backend | Node.js 18+, Express, Supabase JS client, `pg`, JWT, bcrypt, express-validator, Helmet, express-rate-limit, Morgan |
+| ML service | Python, Flask, scikit-learn, pandas, NumPy, joblib |
+| Database | PostgreSQL through Supabase (`backend/database/schema.sql`). An alternative Railway schema is in `schema-railway.sql`, and incremental migrations are in `backend/database/migrations/` |
 
-### Backend
-- **Runtime**: Node.js 18+
-- **Framework**: Express.js
-- **Authentication**: JWT + Supabase Auth
-- **Database**: PostgreSQL (via Supabase)
-- **Security**: Helmet, CORS, Rate Limiting
+## Project structure
 
-### ML Service
-- **Language**: Python 3.8+
-- **Framework**: Flask
-- **ML Library**: scikit-learn
-- **Model**: ExtraTreesRegressor
-- **Data Processing**: pandas, numpy
-- **Model Serialization**: joblib
+```
+├── frontend-new/            # React + TypeScript web app (Vite)
+│   └── src/
+│       ├── pages/           # Landing, Auth, Dashboard (client · provider · admin), SupplierContact
+│       ├── components/      # Shared UI (ProtectedRoute, LanguageSwitcher, …)
+│       ├── layouts/         # Dashboard layout, header, sidebar
+│       ├── services/        # API clients (predictions, quotations, feedback, …)
+│       ├── contexts/        # Auth and theme contexts
+│       └── i18n/            # English and Arabic translations
+├── backend/                 # Express REST API
+│   ├── app/routes/          # auth, predictions, quotations, suppliers, contracts, feedback, …
+│   ├── config/              # Database clients
+│   ├── database/            # Schemas and SQL migrations
+│   └── server.js
+└── ai-model/                # Flask ML service
+    ├── app.py               # /health, /predict, /predict/<target>, /models/info
+    └── train_with_feedback.py
+```
 
-### Database & Auth
-- **Platform**: Supabase
-- **Database**: PostgreSQL
-- **Authentication**: Supabase Auth
-- **Storage**: Supabase Storage (future)
+## Getting started
 
-## 📦 Installation
-
-### Prerequisites
-- Node.js 18+
-- Python 3.8+
-- npm or yarn
-- Git
-
-### Quick Start
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd GP
-   ```
-
-2. **Start ML Service**
-   ```bash
-   cd ai-model
-   python -m venv venv
-   venv\Scripts\activate  # Windows
-   # source venv/bin/activate  # Mac/Linux
-   pip install -r requirements.txt
-   python app.py
-   ```
-
-3. **Start Backend**
-   ```bash
-   cd backend
-   npm install
-   npm run dev
-   ```
-
-4. **Start Frontend**
-   ```bash
-   cd frontend-new
-   npm install
-   npm run dev
-   ```
-
-5. **Access the application**
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5000
-   - ML Service: http://localhost:5001
-
-📚 **For detailed setup instructions, see [INTEGRATION_GUIDE.md](INTEGRATION_GUIDE.md)**
-
-## 🎯 Usage
-
-### Making a Prediction
-
-1. **Sign up** for a new account
-2. **Log in** to your dashboard
-3. Navigate to **AI Prediction** page
-4. Enter your facility details:
-   - Facility size (sqm)
-   - Number of people
-   - Number of bathrooms
-   - Organization type
-   - Cleaning frequency
-   - Prediction period (days)
-5. Click **Generate Prediction**
-6. View detailed supply predictions
-
-### Example API Request
+**Prerequisites:** Node.js 18+, Python 3.8+, and a Supabase (PostgreSQL) project.
 
 ```bash
-curl -X POST http://localhost:5000/api/predictions/predict \
+# 1. ML service (port 5001)
+cd ai-model
+python -m venv venv && source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
+python app.py
+
+# 2. Backend API (port 5000)
+cd backend
+npm install
+cp .env.example .env        # add your Supabase URL/keys and JWT secret
+npm run dev
+
+# 3. Frontend (port 5173)
+cd frontend-new
+npm install
+npm run dev
+```
+
+Run `backend/database/schema.sql`, and then the files in `backend/database/migrations/`, against your database before first use.
+
+### Example prediction request
+
+```bash
+curl -X POST http://localhost:5001/predict \
   -H "Content-Type: application/json" \
   -d '{
     "facility_size_sqm": 1000,
     "number_of_people": 50,
     "number_of_bathrooms": 10,
     "organization_type": "Hotels",
-    "cleaning_frequency": "Daily",
+    "cleaning_frequency": "Medium",
     "days_count": 30
   }'
 ```
 
-## 📊 Model Performance
+See [`ai-model/README.md`](ai-model/README.md) for the full ML API reference.
 
-Our ML models achieve exceptional accuracy:
+## Maintainer
 
-| Supply Type | R² Score | Avg MAE |
-|------------|----------|---------|
-| Toilet Paper | 0.9993 | 60,483 sheets |
-| Hand Soap | 0.9994 | 8,416 mL |
-| Disinfectant | 0.9970 | 3,815 L |
-| Air Freshener | 1.0000 | 607 mL |
-| Glass Cleaner | 0.9989 | 5,226 mL |
-| Trash Bags | 0.9978 | 1,293 bags |
-| Tissues | 0.9999 | 1,672 sheets |
-| Workers Needed | 0.9998 | 0.33 workers |
-
-## 📁 Project Structure
-
-```
-GP/
-├── frontend-new/              # React TypeScript Frontend
-│   ├── src/
-│   │   ├── pages/            # Page components
-│   │   │   ├── Dashboard/    # Dashboard pages
-│   │   │   │   ├── Dashboard.tsx
-│   │   │   │   ├── Prediction.tsx  # AI Prediction page
-│   │   │   │   ├── Orders.tsx
-│   │   │   │   └── ...
-│   │   │   ├── Auth/         # Authentication pages
-│   │   │   └── Landing/      # Landing page
-│   │   ├── components/       # Reusable components
-│   │   ├── services/         # API services
-│   │   │   └── predictionService.ts
-│   │   ├── contexts/         # React contexts
-│   │   └── layouts/          # Layout components
-│   ├── package.json
-│   └── vite.config.ts
-│
-├── backend/                   # Node.js Express Backend
-│   ├── app/
-│   │   ├── routes/
-│   │   │   ├── auth.js
-│   │   │   ├── predictions.js  # ML API proxy
-│   │   │   ├── inventory.js
-│   │   │   ├── orders.js
-│   │   │   └── analytics.js
-│   │   ├── models/           # Data models
-│   │   ├── services/         # Business logic
-│   │   └── utils/            # Utilities
-│   ├── server.js
-│   └── package.json
-│
-├── ai-model/                  # Python ML Service
-│   ├── models/               # Trained models
-│   │   ├── preprocessor.joblib
-│   │   └── et_model_*.joblib (8 models)
-│   ├── app.py               # Flask API
-│   ├── requirements.txt
-│   └── README.md
-│
-├── docs/                      # Documentation
-├── INTEGRATION_GUIDE.md       # Setup guide
-├── START_SERVICES.md          # Quick start commands
-└── README.md                  # This file
-```
-
-## 🔐 Environment Variables
-
-### Frontend (.env)
-```env
-VITE_API_URL=http://localhost:5000/api
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_anon_key
-```
-
-### Backend (.env)
-```env
-PORT=5000
-NODE_ENV=development
-FRONTEND_URL=http://localhost:5173
-ML_API_URL=http://localhost:5001
-DATABASE_URL=your_database_url
-JWT_SECRET=your_jwt_secret
-```
-
-### ML Service (.env)
-```env
-PORT=5001
-FLASK_ENV=development
-```
-
-## 🧪 Testing
-
-### Test ML Service
-```bash
-curl http://localhost:5001/health
-```
-
-### Test Backend
-```bash
-curl http://localhost:5000/health
-```
-
-### Test Prediction
-```bash
-curl -X POST http://localhost:5000/api/predictions/predict \
-  -H "Content-Type: application/json" \
-  -d '{"facility_size_sqm":1000,"number_of_people":50,"number_of_bathrooms":10,"organization_type":"Hotels"}'
-```
-
-## 📈 Roadmap
-
-### Current Features ✅
-- [x] AI-powered supply predictions
-- [x] User authentication
-- [x] Dashboard overview
-- [x] Prediction interface
-- [x] ML model integration
-
-### In Development 🚧
-- [ ] Inventory management
-- [ ] Order management
-- [ ] Analytics dashboard
-- [ ] Usage tracking
-
-### Planned Features 🔮
-- [ ] Multi-facility support
-- [ ] Automated reordering
-- [ ] Supplier integration
-- [ ] Mobile app
-- [ ] Export reports (PDF/Excel)
-- [ ] Email notifications
-- [ ] Cost optimization recommendations
-- [ ] Blockchain integration for supply chain
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👥 Team
-
-**Cleanity Development Team**
-
-## 📧 Contact
-
-For questions or support, please contact the development team.
-
----
-
-<div align="center">
-
-**Made with ❤️ by the Cleanity Team**
-
-[Website](#) • [Documentation](INTEGRATION_GUIDE.md) • [API Docs](#) • [Support](#)
-
-</div>
+**Saed Alsafadi** · [LinkedIn](https://www.linkedin.com/in/saedalsafadi) · [GitHub](https://github.com/SaedAlsafadi)

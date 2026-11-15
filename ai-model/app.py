@@ -120,7 +120,7 @@ def health_check():
     """Health check endpoint"""
     return jsonify({
         'status': 'OK',
-        'message': 'Cleanity ML API is running',
+        'message': 'Daqeeq ML API is running',
         'models_loaded': len(models),
         'preprocessor_loaded': preprocessor is not None
     }), 200

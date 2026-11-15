@@ -1,6 +1,6 @@
-# Cleanity ML Prediction Service
+# Daqeeq ML Prediction Service
 
-This is the machine learning API service for Cleanity that provides AI-powered predictions for cleaning supply consumption.
+This is the machine learning API service for Daqeeq that provides AI-powered predictions for cleaning supply consumption.
 
 ## Overview
 
@@ -138,7 +138,7 @@ Predict a single supply type (e.g., `/predict/toilet_paper_sheets`)
 
 ### Optional Fields
 - `days_count` (number): Prediction period in days (default: 30)
-- `cleaning_frequency` (string): Cleaning schedule (default: "Daily")
+- `cleaning_frequency` (string): `"Low"`, `"Medium"` or `"High"` (default: `"Medium"`)
 
 ### Organization Types
 - Airports
@@ -157,14 +157,13 @@ Predict a single supply type (e.g., `/predict/toilet_paper_sheets`)
 - company
 
 ### Cleaning Frequencies
-- Daily (7x per week)
-- Weekly (1x per week)
-- Bi-weekly (0.5x per week)
-- Monthly (0.25x per week)
+- `Low` (encoded as 0)
+- `Medium` (encoded as 1, default)
+- `High` (encoded as 2)
 
 ## Model Files
 
-Models are stored in the `models/` directory:
+Models are loaded from the `models/` directory (the `.joblib` files are not committed to this repository):
 - `preprocessor.joblib` - Feature scaler and preprocessor
 - `et_model_*.joblib` - Individual ExtraTreesRegressor models for each target
 
@@ -229,7 +228,3 @@ For production deployment:
 - numpy: Numerical computing
 - joblib: Model serialization
 - flask-cors: CORS handling
-
-## License
-
-MIT License - See LICENSE file for details

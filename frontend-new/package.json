@@ -1,5 +1,5 @@
 {
-  "name": "cleanity-frontend",
+  "name": "daqeeq-frontend",
   "version": "2.0.0",
   "description": "Daqeeq - AI-Powered Cleaning Supply Forecasting Platform",
   "type": "module",
@@ -44,7 +44,7 @@
     "vite": "^6.1.0"
   },
   "keywords": [
-    "cleanity",
+    "daqeeq",
     "cleaning",
     "forecasting",
     "ai",

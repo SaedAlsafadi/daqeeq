@@ -1,4 +1,4 @@
--- Cleanity Database Schema for Railway PostgreSQL
+-- Daqeeq Database Schema for Railway PostgreSQL
 -- Standard PostgreSQL compatible schema
 
 -- Enable UUID extension

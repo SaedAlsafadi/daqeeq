@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get('/health', (req, res) => {
   res.status(200).json({
     status: 'OK',
-    message: 'Cleanity API is running',
+    message: 'Daqeeq API is running',
     timestamp: new Date().toISOString(),
     version: '1.0.0'
   });
@@ -90,7 +90,7 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 Cleanity API server running on port ${PORT}`);
+  console.log(`🚀 Daqeeq API server running on port ${PORT}`);
   console.log(`📊 Health check: http://localhost:${PORT}/health`);
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
 });

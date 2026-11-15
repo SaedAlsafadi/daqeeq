@@ -1,4 +1,4 @@
--- Cleanity AI-Powered Cleaning Supply Forecasting Platform
+-- Daqeeq AI-Powered Cleaning Supply Forecasting Platform
 -- Database Schema
 
 -- Enable UUID extension

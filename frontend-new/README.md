@@ -1,4 +1,4 @@
-# Cleanity Frontend - Integrated Application
+# Daqeeq Frontend
 
 A modern, integrated frontend application combining a professional landing page with a comprehensive dashboard for AI-powered cleaning supply forecasting.
 
